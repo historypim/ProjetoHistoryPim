@@ -29,6 +29,79 @@ std::string trim(const std::string &s) {
 };
 // Limpar Espaço - Fim
 
+void getQuestionario150Anos(){
+	
+	char nome[100], email[100], telefone[15], resposta[1000];
+    int experiencia, conhecimento, comunicacoes, imagens;
+    
+
+    
+    printf("Pesquisa sobre a Exposicao '150 Anos de Santos Dumont'\n");
+    printf("Obrigado por visitar nossa exposicao. Valorizamos sua opiniao e sua privacidade.\n");
+    printf("Esta pesquisa e voluntaria e suas respostas serao usadas apenas para pesquisa e aprimoramento do museu.\n\n");
+
+    printf("1. Informacaes Pessoais (Opcional):\n");
+    printf("Nome: ");
+//    fgets(nome, sizeof(nome), stdin);
+	cin >> nome;
+    printf("E-mail: ");
+//    fgets(email, sizeof(email), stdin);
+	cin >> email;
+    printf("Telefone: ");
+//    fgets(telefone, sizeof(telefone), stdin);
+ 	cin >> telefone;
+
+    printf("\n2. Experiencia na Exposicao:\n");
+    printf("Avalie sua experiencia na exposição de 1 a 5, onde 1  a pior e 5 e a melhor pontuacao:\n");
+    printf("1 - 2 - 3 - 4 - 5\n");
+    printf("Sua resposta: ");
+    scanf("%d", &experiencia);
+//	cin >> experiencia;
+    
+    printf("\n3. O que mais voce gostou na exposicao?\n");
+//    getchar();  // Limpar o buffer do teclado
+//    fgets(resposta, sizeof(resposta), stdin);
+	cin >> resposta;
+    
+    printf("\n4. O que poderia ser melhorado ou adicionado a exposicao?\n");
+//    fgets(resposta, sizeof(resposta), stdin);
+	cin >> resposta;
+    
+    printf("\n5. Conhecimento Adquirido:\n");
+    printf("A exposicao aumentou seu conhecimento sobre a vida e as contribuicoes de Santos Dumont?\n");
+    printf("1 - Sim\n2 - Nao\n");
+    printf("Sua resposta: ");
+//    scanf("%d", &conhecimento);
+	cin >> conhecimento;
+
+    printf("\n6. Consentimento para Comunicações Futuras:\n");
+    printf("Deseja receber comunicacoes futuras do museu?\n");
+    printf("1 - Concordo em receber comunicacoes futuras do museu\n2 - Nao quero receber comunicacoes futuras do museu\n");
+    printf("Sua resposta: ");
+//    scanf("%d", &comunicacoes);
+	cin >> comunicacoes;
+
+    printf("\n7. Uso de Imagens:\n");
+    printf("Concorda com o uso de imagens em material promocional do museu?\n");
+    printf("1 - Concordo com o uso das imagens em material promocional do museu\n2 - Não concordo com o uso das imagens em material promocional do museu\n");
+    printf("Sua resposta: ");
+    scanf("%d", &imagens);
+//	cin >> imagens;
+
+    printf("\n8. Política de Privacidade:\n");
+    
+    
+//    printf("Para obter informacoes detalhadas sobre como coletamos, usamos e protegemos seus dados pessoais, consulte nossa politica de privacidade no seguinte link: [Inserir Link para a Política de Privacidade].\n\n");
+
+//    printf("Declaração de Consentimento:\n");
+//    printf("Ao fornecer suas informações pessoais e marcar as opções acima, você concorda com a coleta e o uso de seus dados pessoais conforme descrito neste questionário e na nossa política de privacidade.\n");
+    
+//    printf("\nData: [ ] Assinatura: [ ]\n\n");
+//    printf("Obrigado por compartilhar suas opiniões. Seu feedback é valioso para nós e nos ajuda a melhorar nossas exposições futuras.\n");	
+    
+    system("PAUSE");
+};
+
 void getObra(int codigoObra){	
 	
 	// system executa comandos do DOS (Console)
@@ -39,17 +112,38 @@ void getObra(int codigoObra){
 	
 	ifstream meuArquivo; // define o arquivo
 	
-	if(codigoObra == 1)				
+	if(codigoObra == 0){
+				
+		meuArquivo.open("Inicial.txt", std::ifstream::in);
+		
+	}
+		
+	if(codigoObra == 4){
+	
 		meuArquivo.open("100AnosArteModerna.txt", std::ifstream::in);
+		
+	}
 	
-	if(codigoObra == 2)				
+	if(codigoObra == 5){
+	
 		meuArquivo.open("150AnosSantosDummont.txt", std::ifstream::in);
+		getQuestionario150Anos();
+		
+		system("ProjetoHistoryPim.exe");
+		
+	}
 	
-	if(codigoObra == 3)				
+	if(codigoObra == 6){
+		
 		meuArquivo.open("JogosOlimpicosParis.txt", std::ifstream::in);
+		
+	}
 	
-	if(codigoObra == 4)				
+	if(codigoObra == 7){
+		
 		meuArquivo.open("Vangogh.txt", std::ifstream::in);
+		
+	}
 	
 	if (meuArquivo.is_open())
 	{
@@ -175,9 +269,13 @@ void menu()
 	printf("Qual opcao voce deseja acessar?\n\n");
 	printf("1) Compra Ingresso\n");
 	printf("2) Exibir Vendas\n");
-	printf("3) Questionario\n");
+//	printf("3) Questionario\n");
+	printf("4) Descricao 100 Anos de Arte Moderna\n");
+	printf("5) Descricao 150 Anos de Santos Dumont\n");
+	printf("6) Descricao Olimpiadas Paris\n");
+	printf("7) Descricao Van Gogh\n");
 	//printf("4) Van Gogh\n");
-	printf("5) Sair\n");
+	printf("8) Sair\n");
 	printf("\n\n......................\n\n");	
 	
 };
@@ -192,6 +290,86 @@ void CompraInteira(){
 	valor = 50.00;
 		
 	system("cls");
+	
+	cout << ">>> INGRESSO INTEIRO <<<\n\n";
+	
+	cout << "Digite o Nome: ";		
+	cin >> nomeComprador;	
+	
+	cout << "\nDigite o Cpf: ";	
+	cin >> cpf;
+	
+	cout << "\nDigite a quantidade: ";	
+	cin >> quantidade;	
+	
+	cout << "\nPressione 1 para Finalizar a compra ou 2 para Cancelar ";	
+	
+	scanf("%d", &confirmar);	
+	
+	if(confirmar == 1)
+	{		
+		cout << "\nCompra finalizada com sucesso!\n\n";
+		
+		salvaIngresso(nomeComprador, cpf, tipoIngresso, quantidade, valor);
+				
+	}
+	else{
+		system("ProjetoHistoryPim.exe");
+	}
+	
+};
+
+void CompraMeia(){
+	
+	string nomeComprador = "", cpf = "", tipoIngresso = "";
+	int confirmar, quantidade;
+	float valor;
+	
+	tipoIngresso = "MEIA";
+	valor = 25.00;
+		
+	system("cls");
+	
+	cout << ">>> INGRESSO MEIA <<<\n\n";
+	
+	cout << "Digite o Nome: ";		
+	cin >> nomeComprador;	
+	
+	cout << "\nDigite o Cpf: ";	
+	cin >> cpf;
+	
+	cout << "\nDigite a quantidade: ";	
+	cin >> quantidade;	
+	
+	cout << "\nPressione 1 para Finalizar a compra ou 2 para Cancelar ";	
+	
+	scanf("%d", &confirmar);	
+	
+	if(confirmar == 1)
+	{		
+		cout << "\nCompra finalizada com sucesso!\n\n";
+		
+		salvaIngresso(nomeComprador, cpf, tipoIngresso, quantidade, valor);
+				
+	}
+	else{
+		system("ProjetoHistoryPim.exe");
+	}
+	
+};
+
+void CompraIsento(){
+	
+	string nomeComprador = "", cpf = "", tipoIngresso = "";
+	int confirmar, quantidade;
+	float valor;
+	
+	tipoIngresso = "ISENTO";
+	valor = 0.00;
+		
+	system("cls");
+	
+	cout << ">>> INGRESSO ISENTO <<<\n\n";
 	
 	cout << "Digite o Nome: ";		
 	cin >> nomeComprador;	
@@ -237,9 +415,23 @@ void CompraIngresso(){
 	
 	 switch(tipoIngresso) {
       case 1:{
-      	// Comprar Ingresso
+      	// Comprar Ingresso Inteiro
         CompraInteira();
-		//getObra(1);
+		break;
+	  }
+	  case 2:{
+      	// Comprar Ingresso Meia
+        CompraMeia();
+		break;
+	  }
+	  case 3:{
+      	// Comprar Ingresso Isento
+        CompraIsento();
+		break;
+	  }
+	  case 4:{
+      	// Voltar
+        system("ProjetoHistoryPim.exe");
 		break;
 	  }
 	  default:
@@ -252,15 +444,14 @@ void CompraIngresso(){
 int main(int argc, char** argv) {
 	int opcaoMenu;
   	int opcaoInvalido;	
-	
-	//setCsv();		
-	
+		
 	// Totem
+	// 0 - Inicial
 	// 1 - 100 Anos de Arte Moderna
 	// 2 - 150 Anos de Santos Dummont
 	// 3 - Jogos Olimpicos de Paris
 	// 4 - Van Gogh
-	getObra(1);
+	getObra(0);
 	
 	// Venda
 	do {
@@ -280,25 +471,28 @@ int main(int argc, char** argv) {
         ExibirVendas();
 		break;
 	  }
-	  case 3:{
-      	// Jogos Olimpicos 2024
-        getObra(3);
-		break;
-	  }
+//	  case 3:{
+//      	// Jogos Olimpicos 2024
+//        getObra(3);
+//		break;
+//	  }
 	  case 4:{
       	// Van Gogh
         getObra(4);
 		break;
 	  }
 	  case 5:
-        printf("Comprar Ingresso");
+        getObra(5);
         break;
       case 6:
-      	// Sair
-        system("exit");
+      	getObra(6);
         break;
       case 7:
-        printf("Questionario");
+        getObra(7);
+        break;
+   	  case 8:
+        // Sair
+        system("exit");
         break;
       default:
         printf("Opção inválida\n");
