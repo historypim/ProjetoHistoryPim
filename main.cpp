@@ -120,17 +120,12 @@ void getObra(int codigoObra){
 		
 	if(codigoObra == 4){
 	
-		meuArquivo.open("100AnosArteModerna.txt", std::ifstream::in);
-		
+		meuArquivo.open("100AnosArteModerna.txt");		
 	}
 	
-	if(codigoObra == 5){
-	
-		meuArquivo.open("150AnosSantosDummont.txt", std::ifstream::in);
-		getQuestionario150Anos();
+	if(codigoObra == 5){	
 		
-		system("ProjetoHistoryPim.exe");
-		
+		meuArquivo.open("150AnosSantosDummont.txt");
 	}
 	
 	if(codigoObra == 6){
@@ -167,7 +162,7 @@ void getObra(int codigoObra){
 	system("cls");
 	
 	// Encerra o programa
-	system ("exit");
+	//system ("exit");
 };
 
 void ExibirVendas(){
@@ -447,10 +442,10 @@ int main(int argc, char** argv) {
 		
 	// Totem
 	// 0 - Inicial
-	// 1 - 100 Anos de Arte Moderna
-	// 2 - 150 Anos de Santos Dummont
-	// 3 - Jogos Olimpicos de Paris
-	// 4 - Van Gogh
+	// 4 - 100 Anos de Arte Moderna
+	// 5 - 150 Anos de Santos Dummont
+	// 6 - Jogos Olimpicos de Paris
+	// 7 - Van Gogh
 	getObra(0);
 	
 	// Venda
@@ -475,19 +470,23 @@ int main(int argc, char** argv) {
 //      	// Jogos Olimpicos 2024
 //        getObra(3);
 //		break;
-//	  }
+	  }
 	  case 4:{
-      	// Van Gogh
+      	// 4 - 100 Anos de Arte Moderna
         getObra(4);
 		break;
 	  }
 	  case 5:
+	  	// 5 - 150 Anos de Santos Dummont
         getObra(5);
+        getQuestionario150Anos();
         break;
       case 6:
+      	// 6 - Jogos Olimpicos de Paris
       	getObra(6);
         break;
       case 7:
+      	// 7 - Van Gogh
         getObra(7);
         break;
    	  case 8:
