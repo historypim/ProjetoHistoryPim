@@ -29,6 +29,79 @@ std::string trim(const std::string &s) {
 };
 // Limpar Espaço - Fim
 
+void get100AnosArteModerna(){
+	
+	char nome[100], email[100], telefone[15], resposta[1000];
+    int experiencia, conhecimento, comunicacoes, imagens;
+    
+
+    
+    printf("Pesquisa sobre a Exposicao '100 Anos da arte moderna");
+    printf("Obrigado por visitar nossa exposicao. Valorizamos sua opiniao e sua privacidade.\n");
+    printf("Esta pesquisa e voluntaria e suas respostas serao usadas apenas para pesquisa e aprimoramento do museu.\n\n");
+
+    printf("1. Informacaes Pessoais (Opcional):\n");
+    printf("Nome: ");
+//    fgets(nome, sizeof(nome), stdin);
+	cin >> nome;
+    printf("E-mail: ");
+//    fgets(email, sizeof(email), stdin);
+	cin >> email;
+    printf("Telefone: ");
+//    fgets(telefone, sizeof(telefone), stdin);
+ 	cin >> telefone;
+
+    printf("\n2. Experiencia na Exposicao:\n");
+    printf("Avalie sua experiencia na exposição de 1 a 5, onde 1  a pior e 5 e a melhor pontuacao:\n");
+    printf("1 - 2 - 3 - 4 - 5\n");
+    printf("Sua resposta: ");
+    scanf("%d", &experiencia);
+//	cin >> experiencia;
+    
+    printf("\n3. O que mais voce gostou na exposicao?\n");
+//    getchar();  // Limpar o buffer do teclado
+//    fgets(resposta, sizeof(resposta), stdin);
+	cin >> resposta;
+    
+    printf("\n4. O que poderia ser melhorado ou adicionado a exposicao?\n");
+//    fgets(resposta, sizeof(resposta), stdin);
+	cin >> resposta;
+    
+    printf("\n5. Conhecimento Adquirido:\n");
+    printf("A exposicao aumentou seu conhecimento sobre a vida e as contribuicoes de Santos Dumont?\n");
+    printf("1 - Sim\n2 - Nao\n");
+    printf("Sua resposta: ");
+//    scanf("%d", &conhecimento);
+	cin >> conhecimento;
+
+    printf("\n6. Consentimento para Comunicações Futuras:\n");
+    printf("Deseja receber comunicacoes futuras do museu?\n");
+    printf("1 - Concordo em receber comunicacoes futuras do museu\n2 - Nao quero receber comunicacoes futuras do museu\n");
+    printf("Sua resposta: ");
+//    scanf("%d", &comunicacoes);
+	cin >> comunicacoes;
+
+    printf("\n7. Uso de Imagens:\n");
+    printf("Concorda com o uso de imagens em material promocional do museu?\n");
+    printf("1 - Concordo com o uso das imagens em material promocional do museu\n2 - Não concordo com o uso das imagens em material promocional do museu\n");
+    printf("Sua resposta: ");
+    scanf("%d", &imagens);
+//	cin >> imagens;
+
+    printf("\n8. Política de Privacidade:\n");
+    
+    
+//    printf("Para obter informacoes detalhadas sobre como coletamos, usamos e protegemos seus dados pessoais, consulte nossa politica de privacidade no seguinte link: [Inserir Link para a Política de Privacidade].\n\n");
+
+//    printf("Declaração de Consentimento:\n");
+//    printf("Ao fornecer suas informações pessoais e marcar as opções acima, você concorda com a coleta e o uso de seus dados pessoais conforme descrito neste questionário e na nossa política de privacidade.\n");
+    
+//    printf("\nData: [ ] Assinatura: [ ]\n\n");
+//    printf("Obrigado por compartilhar suas opiniões. Seu feedback é valioso para nós e nos ajuda a melhorar nossas exposições futuras.\n");	
+    
+    system("PAUSE");
+};
+
 void getQuestionario150Anos(){
 	
 	char nome[100], email[100], telefone[15], resposta[1000];
@@ -37,6 +110,152 @@ void getQuestionario150Anos(){
 
     
     printf("Pesquisa sobre a Exposicao '150 Anos de Santos Dumont'\n");
+    printf("Obrigado por visitar nossa exposicao. Valorizamos sua opiniao e sua privacidade.\n");
+    printf("Esta pesquisa e voluntaria e suas respostas serao usadas apenas para pesquisa e aprimoramento do museu.\n\n");
+
+    printf("1. Informacaes Pessoais (Opcional):\n");
+    printf("Nome: ");
+//    fgets(nome, sizeof(nome), stdin);
+	cin >> nome;
+    printf("E-mail: ");
+//    fgets(email, sizeof(email), stdin);
+	cin >> email;
+    printf("Telefone: ");
+//    fgets(telefone, sizeof(telefone), stdin);
+ 	cin >> telefone;
+
+    printf("\n2. Experiencia na Exposicao:\n");
+    printf("Avalie sua experiencia na exposição de 1 a 5, onde 1  a pior e 5 e a melhor pontuacao:\n");
+    printf("1 - 2 - 3 - 4 - 5\n");
+    printf("Sua resposta: ");
+    scanf("%d", &experiencia);
+//	cin >> experiencia;
+    
+    printf("\n3. O que mais voce gostou na exposicao?\n");
+//    getchar();  // Limpar o buffer do teclado
+//    fgets(resposta, sizeof(resposta), stdin);
+	cin >> resposta;
+    
+    printf("\n4. O que poderia ser melhorado ou adicionado a exposicao?\n");
+//    fgets(resposta, sizeof(resposta), stdin);
+	cin >> resposta;
+    
+    printf("\n5. Conhecimento Adquirido:\n");
+    printf("A exposicao aumentou seu conhecimento sobre a vida e as contribuicoes de Santos Dumont?\n");
+    printf("1 - Sim\n2 - Nao\n");
+    printf("Sua resposta: ");
+//    scanf("%d", &conhecimento);
+	cin >> conhecimento;
+
+    printf("\n6. Consentimento para Comunicações Futuras:\n");
+    printf("Deseja receber comunicacoes futuras do museu?\n");
+    printf("1 - Concordo em receber comunicacoes futuras do museu\n2 - Nao quero receber comunicacoes futuras do museu\n");
+    printf("Sua resposta: ");
+//    scanf("%d", &comunicacoes);
+	cin >> comunicacoes;
+
+    printf("\n7. Uso de Imagens:\n");
+    printf("Concorda com o uso de imagens em material promocional do museu?\n");
+    printf("1 - Concordo com o uso das imagens em material promocional do museu\n2 - Não concordo com o uso das imagens em material promocional do museu\n");
+    printf("Sua resposta: ");
+    scanf("%d", &imagens);
+//	cin >> imagens;
+
+    printf("\n8. Política de Privacidade:\n");
+    
+    
+//    printf("Para obter informacoes detalhadas sobre como coletamos, usamos e protegemos seus dados pessoais, consulte nossa politica de privacidade no seguinte link: [Inserir Link para a Política de Privacidade].\n\n");
+
+//    printf("Declaração de Consentimento:\n");
+//    printf("Ao fornecer suas informações pessoais e marcar as opções acima, você concorda com a coleta e o uso de seus dados pessoais conforme descrito neste questionário e na nossa política de privacidade.\n");
+    
+//    printf("\nData: [ ] Assinatura: [ ]\n\n");
+//    printf("Obrigado por compartilhar suas opiniões. Seu feedback é valioso para nós e nos ajuda a melhorar nossas exposições futuras.\n");	
+    
+    system("PAUSE");
+};
+
+void getVangogh(){
+	
+	char nome[100], email[100], telefone[15], resposta[1000];
+    int experiencia, conhecimento, comunicacoes, imagens;
+    
+
+    
+    printf("Pesquisa sobre a Exposicao 'Van gogh'\n");
+    printf("Obrigado por visitar nossa exposicao. Valorizamos sua opiniao e sua privacidade.\n");
+    printf("Esta pesquisa e voluntaria e suas respostas serao usadas apenas para pesquisa e aprimoramento do museu.\n\n");
+
+    printf("1. Informacaes Pessoais (Opcional):\n");
+    printf("Nome: ");
+//    fgets(nome, sizeof(nome), stdin);
+	cin >> nome;
+    printf("E-mail: ");
+//    fgets(email, sizeof(email), stdin);
+	cin >> email;
+    printf("Telefone: ");
+//    fgets(telefone, sizeof(telefone), stdin);
+ 	cin >> telefone;
+
+    printf("\n2. Experiencia na Exposicao:\n");
+    printf("Avalie sua experiencia na exposição de 1 a 5, onde 1  a pior e 5 e a melhor pontuacao:\n");
+    printf("1 - 2 - 3 - 4 - 5\n");
+    printf("Sua resposta: ");
+    scanf("%d", &experiencia);
+//	cin >> experiencia;
+    
+    printf("\n3. O que mais voce gostou na exposicao?\n");
+//    getchar();  // Limpar o buffer do teclado
+//    fgets(resposta, sizeof(resposta), stdin);
+	cin >> resposta;
+    
+    printf("\n4. O que poderia ser melhorado ou adicionado a exposicao?\n");
+//    fgets(resposta, sizeof(resposta), stdin);
+	cin >> resposta;
+    
+    printf("\n5. Conhecimento Adquirido:\n");
+    printf("A exposicao aumentou seu conhecimento sobre a vida e as contribuicoes de Santos Dumont?\n");
+    printf("1 - Sim\n2 - Nao\n");
+    printf("Sua resposta: ");
+//    scanf("%d", &conhecimento);
+	cin >> conhecimento;
+
+    printf("\n6. Consentimento para Comunicações Futuras:\n");
+    printf("Deseja receber comunicacoes futuras do museu?\n");
+    printf("1 - Concordo em receber comunicacoes futuras do museu\n2 - Nao quero receber comunicacoes futuras do museu\n");
+    printf("Sua resposta: ");
+//    scanf("%d", &comunicacoes);
+	cin >> comunicacoes;
+
+    printf("\n7. Uso de Imagens:\n");
+    printf("Concorda com o uso de imagens em material promocional do museu?\n");
+    printf("1 - Concordo com o uso das imagens em material promocional do museu\n2 - Não concordo com o uso das imagens em material promocional do museu\n");
+    printf("Sua resposta: ");
+    scanf("%d", &imagens);
+//	cin >> imagens;
+
+    printf("\n8. Política de Privacidade:\n");
+    
+    
+//    printf("Para obter informacoes detalhadas sobre como coletamos, usamos e protegemos seus dados pessoais, consulte nossa politica de privacidade no seguinte link: [Inserir Link para a Política de Privacidade].\n\n");
+
+//    printf("Declaração de Consentimento:\n");
+//    printf("Ao fornecer suas informações pessoais e marcar as opções acima, você concorda com a coleta e o uso de seus dados pessoais conforme descrito neste questionário e na nossa política de privacidade.\n");
+    
+//    printf("\nData: [ ] Assinatura: [ ]\n\n");
+//    printf("Obrigado por compartilhar suas opiniões. Seu feedback é valioso para nós e nos ajuda a melhorar nossas exposições futuras.\n");	
+    
+    system("PAUSE");
+};
+
+void getJogosOlimpicosParis(){
+	
+	char nome[100], email[100], telefone[15], resposta[1000];
+    int experiencia, conhecimento, comunicacoes, imagens;
+    
+
+    
+    printf("Pesquisa sobre a Exposicao 'Jogos Olimpicos'\n");
     printf("Obrigado por visitar nossa exposicao. Valorizamos sua opiniao e sua privacidade.\n");
     printf("Esta pesquisa e voluntaria e suas respostas serao usadas apenas para pesquisa e aprimoramento do museu.\n\n");
 
@@ -470,10 +689,11 @@ int main(int argc, char** argv) {
 //      	// Jogos Olimpicos 2024
 //        getObra(3);
 //		break;
-	  }
+//           }
 	  case 4:{
       	// 4 - 100 Anos de Arte Moderna
         getObra(4);
+        get100AnosArteModerna();
 		break;
 	  }
 	  case 5:
@@ -484,10 +704,12 @@ int main(int argc, char** argv) {
       case 6:
       	// 6 - Jogos Olimpicos de Paris
       	getObra(6);
+      	getJogosOlimpicosParis();
         break;
       case 7:
       	// 7 - Van Gogh
         getObra(7);
+        getVangogh();
         break;
    	  case 8:
         // Sair
